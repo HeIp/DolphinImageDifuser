@@ -18,7 +18,7 @@ class WatermarkDataset(Dataset):
         self.root_dir = root_dir
         self.transform = transform
         self.image_paths = [os.path.join(root_dir, f) for f in os.listdir(root_dir) if
-                            f.lower().endswith(('.jpg', '.jpeg', '.png'))]
+                            f.lower().endswith(('.JPG'))]
 
     def __len__(self):
         return len(self.image_paths)
