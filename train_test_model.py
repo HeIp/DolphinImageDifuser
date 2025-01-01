@@ -17,8 +17,8 @@ train_dataset = WatermarkDataset(root_dir="./YesWaterMark", transform=transform)
 test_dataset = WatermarkDataset(root_dir="./NoWaterMark", transform=transform)
 
 # Create DataLoaders
-train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+train_loader = DataLoader(train_dataset, batch_size=66, shuffle=False)
+test_loader = DataLoader(test_dataset, batch_size=66, shuffle=False)
 
 # Load pre-trained ResNet-50 model (using recommended weights)
 model = models.resnet50(weights=ResNet50_Weights.DEFAULT)  # Use pretrained=True for default weights
