@@ -1,12 +1,18 @@
-from PIL import Image
-import os
+from PIL import Image #PIL.Image: This library is used for image processing tasks like opening and converting images.
+import os #This library provides functionalities for interacting with the operating system, such as listing files in a directory.
 import torch #The core PyTorch library for deep learning.
 from torchvision import models #Provides pre-trained models, datasets, and image transformation functions.
-from torchvision import transforms
+from torchvision import transforms # Offers functions for transforming images (e.g., resizing, normalization).
 from torchvision.models import resnet50, ResNet50_Weights
 from torch.utils.data import Dataset, DataLoader
+#This class serves as the base class for creating custom datasets.
+#DataLoader: This class helps manage loading batches of data during training and evaluation.
 
 
+
+
+#Dataset from torchvision.utils.data
+# It's designed to load and pre-process watermark images for training a deep learning mode
 class WatermarkDataset(Dataset):
     def __init__(self, root_dir, transform=None):
         self.root_dir = root_dir
